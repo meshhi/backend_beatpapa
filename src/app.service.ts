@@ -1,9 +1,10 @@
 import { Injectable } from '@nestjs/common';
+import { Request } from 'express';
 
 @Injectable()
 export class AppService {
-  getHello(): string {
-    console.log('hello');
-    return 'Hello World!';
+  getHello(request: Request): string {
+    console.log(request.body);
+    return 'ok-telegram-jira';
   }
 }
